@@ -27,15 +27,15 @@ It will create a new minimal Scala project for you.
 
 ## Assignments
 
-- Do Java Stuff in Scala
-- Scala Collections
-- Functional sets
-- underscore.io (?)
+I want to...
+
+- learn how to do typical Java Stuff in Scala, have a look at the [java2scala assignment](/docs/java2scala.md)
+
 
 ## Learn more
 
-- koans
-- functional programming in Scala
+- [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1) by Martin Odersky on coursera
+- [Scala courses](http://underscore.io/training/) by [underscore.io](http://underscore.io)
 
 ## Contribution policy
 
