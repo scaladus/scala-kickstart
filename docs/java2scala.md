@@ -4,7 +4,7 @@ This assignment is about learning some very Scala basics by translating some Jav
 
 ## Java Domain Model
 
-There is a very simple domain model in `src/main/java/org.sugdus.java2scala`.
+There is a very simple domain model in `src/main/java/org.scaladus.java.java2scala`.
 It consists of classes:
 
 - Person
@@ -19,12 +19,12 @@ An employee is a person which has a salary.
 An employee's salary can not be less then zero.
 A customer is a person with a customer ID.
 
-You can use the class `org.sugdus.java.java2scala.JavaMain` to play around with the Java model.
+You can use the class `org.scaladus.java.java2scala.JavaMain` to play around with the Java model.
 
 ## Translating the model to scala
 
 The task is translate the Java model to Scala.
-Use the `org.sugdus.java2scala.ScalaMain` class to play around with the code you have written.
+Use the `org.scaladus.java2scala.ScalaMain` class to play around with the code you have written.
 Be prepared to be amazed by how few lines of code you have to write to translate the Java code.
 
 ## Scala Syntax Cheat Sheet

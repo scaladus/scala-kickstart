@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.sugdus.collections
+package org.scaladus.collections
 
 import java.time.LocalDate
 import java.time.Month._
 
 import org.scalatest.{FlatSpec, Matchers}
-import org.sugdus.collections.Collections._
+import org.scaladus.collections.Collections._
 
 class CollectionsSpec extends FlatSpec with Matchers {
 

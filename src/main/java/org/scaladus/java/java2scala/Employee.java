@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.sugdus.java.java2scala;
+package org.scaladus.java.java2scala;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

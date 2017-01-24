@@ -4,7 +4,7 @@ This assignment is about getting to know the Scala collections API.
 
 ## Assignment
 
-The assignment is to use the Scala collection API to provide the missing implementations in `org.sugdus.collections.Collections`.
+The assignment is to use the Scala collection API to provide the missing implementations in `org.scaladus.collections.Collections`.
 There are tests for all methods in the `CollectionsSpec`.
 You can run all tests using `sbt test` or by executing the spec from within your IDE.
 
