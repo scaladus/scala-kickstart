@@ -62,15 +62,15 @@ class CollectionsSpec extends FlatSpec with Matchers {
   val recipients = List("Homer", "Bart", "Marge")
 
   it should "calculate the average age" in {
-    Collections.averageAge(persons) shouldBe 30.57
+    Collections.averageAge(persons) shouldBe 33
   }
 
   it should "find the maximum age" in {
-    Collections.maxAge(persons) shouldBe 46
+    Collections.maxAge(persons) shouldBe 49
   }
 
   it should "calculate statistics" in {
-    Collections.ageStatistics(persons) shouldBe Statistics(1, 46, 30.571428571428573, 7, 2141)
+    Collections.ageStatistics(persons) shouldBe Statistics(4, 49, 33, 7, 236)
   }
 
   it should "extract first names" in {
