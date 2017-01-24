@@ -16,6 +16,7 @@
 package org.sugdus.java.java2scala;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Objects;
 
 import static java.util.Objects.requireNonNull;
@@ -48,7 +49,7 @@ public class Person {
     }
 
     public int calculateAge() {
-        return this.birthday.getYear() - LocalDate.now().getYear();
+        return Period.between(this.birthday, LocalDate.now()).getYears();
     }
 
     @Override
