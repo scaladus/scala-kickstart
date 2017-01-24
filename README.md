@@ -31,6 +31,7 @@ I want to...
 
 - learn how to do typical Java Stuff in Scala, have a look at the [java2scala assignment](/docs/java2scala.md)
 - learn how to work with Scala collections, have a look at the [scala collections assignment](/docs/scala-collections.md)
+- learn how to do functional programming in Scala, have a look at the [FunSets assignment](/docs/funsets.md)
 
 ## Learn more
 
