@@ -78,7 +78,7 @@ class CollectionsSpec extends FlatSpec with Matchers {
   }
 
   it should "extract names sorted by last name" in {
-    Collections.extractNamesSortedByLastName(persons) shouldBe List("Michael Abrahams", "Chris Cross", "John Dole", "Jane Jungle", "Pete Power", "Mary Smith")
+    Collections.extractNamesSortedByLastName(persons) shouldBe List("Michael Abrahams", "Chris Cross", "John Dole", "Jane Jungle", "Pete Power", "Maggie Simpson", "Mary Smith")
   }
 
   it should "collect first names of females" in {
@@ -90,7 +90,7 @@ class CollectionsSpec extends FlatSpec with Matchers {
   }
 
   it should "extract first names with prefix" in {
-    Collections.extractFirstnamesWhereLastnameStartsWith(persons, "S") should contain allOf ("Maggie", "Marge")
+    Collections.extractFirstnamesWhereLastnameStartsWith(persons, "S") should contain allOf ("Maggie", "Mary")
   }
 
   it should "build a comma separated list of first names" in {
