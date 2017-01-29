@@ -150,7 +150,12 @@ class CollectionsSpec extends FlatSpec with Matchers {
   }
 
   it should "compute a dealers inventory" in {
-    Collections.computeDealerInventory(invoices)
+    Collections.computeDealerInventory(invoices) shouldBe Map(
+      "Crusty Burger" -> List(("Burger", 5), ("Coke", 5)),
+      "Moe" -> List(("Beer", 1.5), ("Burger", 4.5)),
+      "Kwik-E-Mart" -> List(("Beer", 0.9), ("Chips", 0.5), ("Coke", 2.5), ("Cake", 3.4), ("Corn Flakse", 2.3)),
+      "Flander's Left-Handed Store" -> List(("Left-Handed Scissors", 10.0))
+    )
   }
 
 }
