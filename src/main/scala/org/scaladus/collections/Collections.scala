@@ -22,129 +22,81 @@ object Collections {
   /**
     * Compute the average age of the given list of Persons.
     */
-  def averageAge(persons: List[Person]): Double = persons.map(_.age).sum / persons.length
+  def averageAge(persons: List[Person]): Double = ???
 
   /**
     * How old is the oldest person in the given list.
     */
-  def maxAge(persons: List[Person]): Int = persons.map(_.age).max
-
-  def minAge(persons: List[Person]): Int = persons.map(_.age).min
-
-  def countAges(persons: List[Person]): Int = persons.map(_.age).toSet.size
+  def maxAge(persons: List[Person]): Int = ???
 
   /**
     * Compute Age-Statistics (max, min, average, ...) for the given list of Persons.
     */
-  def ageStatistics(persons: List[Person]): Statistics = Statistics(
-    max = maxAge(persons),
-    min = minAge(persons),
-    avg = averageAge(persons),
-    count = countAges(persons),
-    sum = persons.map(_.age).sum
-  )
+  def ageStatistics(persons: List[Person]): Statistics = ???
 
   /**
     * Extract a list of names (firstname and lastname separated by space) from a given list of Person objects.
     *
     * Example-Result: ["Maggie Smith", "Marge Simpson", "Mary Lee"]
     */
-  def extractNames(persons: List[Person]): List[String] =
-    persons
-      .map(person => s"${person.firstName} ${person.lastName}")
+  def extractNames(persons: List[Person]): List[String] = ???
 
   /**
     * Extract a sorted (ascending by lastname) list of names (firstname and lastname separated by space) from a given list of Person objects.
     */
-  def extractNamesSortedByLastName(persons: List[Person]): List[String] =
-    extractNames(persons.sortBy(_.lastName))
+  def extractNamesSortedByLastName(persons: List[Person]): List[String] = ???
 
   /**
     * From a given list of Person objects, extract a list of female firstnames
     */
-  def extractFemaleFirstNames(persons: List[Person]): List[String] = persons
-    .filter(_.gender == Female)
-    .map(person => person.firstName)
+  def extractFemaleFirstNames(persons: List[Person]): List[String] = ???
 
   /**
     * Extract all females older than 18 years from a given list of Person objects.
     */
-  def findAdultWomen(persons: List[Person]): List[Person] =
-    persons
-      .filter(person => (person.age > 18) && (person.gender == Female))
+  def findAdultWomen(persons: List[Person]): List[Person] = ???
 
   /**
     * From a given list of Person objects, extract a set of firstnames of the people whose lastname starts with the given string.
     */
-  def extractFirstnamesWhereLastnameStartsWith(persons: List[Person], startsWith: String): List[String] =
-    persons
-      .filter(_.lastName.startsWith(startsWith))
-      .map(_.firstName)
+  def extractFirstnamesWhereLastnameStartsWith(persons: List[Person], startsWith: String): List[String] = ???
 
   /**
     * Build a comma-separated list of the firstnames of a list of Persons.
     *
     * Example-Result: "Maggie, Marge, Mary"
     */
-  def commaSeparatedFirstNames(persons: List[Person]): String =
-    persons
-      .map(_.firstName)
-      .mkString(", ")
+  def commaSeparatedFirstNames(persons: List[Person]): String = ???
 
   /**
     * Identify the cheapest product (by pricePerUnit) in all invoices.
     */
-  def cheapestProduct(invoices: List[Invoice]): String =
-    invoices
-      .flatMap(_.items)
-      .sortBy(_.pricePerUnit)
-      .head
-      .productName
+  def cheapestProduct(invoices: List[Invoice]): String = ???
 
   /**
     * From a given list of invoices, extract a set of all product names.
     */
-  def extractProductNames(invoices: List[Invoice]): List[String] =
-    invoices
-      .flatMap(_.items)
-      .map(_.productName)
-
+  def extractProductNames(invoices: List[Invoice]): List[String] = ???
 
   /**
     * Identify the invoice with the highest total amount.
     */
-  def mostExpensiveInvoice(invoices: List[Invoice]): Invoice =
-    invoices
-      .sortBy(_.total)
-      .last
+  def mostExpensiveInvoice(invoices: List[Invoice]): Invoice = ???
 
   /**
     * Just what the method name says.
     */
-  def groupInvoicesByRecipient(invoices: List[Invoice]): Map[String, List[Invoice]] =
-    invoices.groupBy(_.recipient)
+  def groupInvoicesByRecipient(invoices: List[Invoice]): Map[String, List[Invoice]] = ???
 
   /**
     * Compute the total amount, that each receiver spent.
     */
-  def expensesByRecipient(invoices: List[Invoice]): Map[String, BigDecimal] =
-    groupInvoicesByRecipient(invoices)
-      .map({
-        case (key, theInvoices) =>
-          (key, theInvoices
-            .flatMap(_.items)
-            .map(i => i.pricePerUnit * i.quantity).sum)
-      })
-
+  def expensesByRecipient(invoices: List[Invoice]): Map[String, BigDecimal] = ???
 
   /**
     * How many items of each product have been purchased?
     */
-  def purchaseCountByProduct(invoices: List[Invoice]): Map[String, Int] =
-    invoices
-      .flatMap(_.items)
-      .groupBy(_.productName)
-      .map({ case (productName, items) => (productName, items.map(_.quantity).sum) })
+  def purchaseCountByProduct(invoices: List[Invoice]): Map[String, Int] = ???
 
   /**
     * For every product, compute the cheapest dealer. Return as a Map where the key is the product name and the value
@@ -152,26 +104,17 @@ object Collections {
     */
   def cheapestDealersByProduct(invoices: List[Invoice]): Map[String, String] = ???
 
-
   /**
     * From a given list of invoices, compute for every dealer the available products together with its price.
     */
-  def computeDealerInventory(invoices: List[Invoice]): Map[String, List[(String, BigDecimal)]] =
-    invoices
-      .groupBy(_.sender)
-      .map { case (sender, invoices2) => (sender, invoices2
-        .flatMap(_.items)
-        .map(item => (item.productName, item.pricePerUnit)))
-      }
+  def computeDealerInventory(invoices: List[Invoice]): Map[String, List[(String, BigDecimal)]] = ???
 
   case class Person(firstName: String, lastName: String, birthday: LocalDate, gender: Gender) {
     val age: Int = Period.between(birthday, LocalDate.now()).getYears
   }
 
   sealed trait Gender
-
   object Female extends Gender
-
   object Male extends Gender
 
   case class Statistics(min: Int, max: Int, avg: Double, count: Int, sum: Int)
@@ -181,5 +124,4 @@ object Collections {
   }
 
   case class InvoiceItem(productName: String, quantity: Int, pricePerUnit: BigDecimal)
-
 }
