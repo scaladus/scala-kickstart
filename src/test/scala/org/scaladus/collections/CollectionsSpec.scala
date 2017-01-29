@@ -35,28 +35,28 @@ class CollectionsSpec extends FlatSpec with Matchers {
 
   val invoices = List(
     Invoice("Crusty Burger", "Homer", List(
-      InvoiceItem("Burger", 5, BigDecimal.valueOf(5)),
-      InvoiceItem("Coke", 1, BigDecimal.valueOf(5)))),
+      InvoiceItem("Burger", 5, 5),
+      InvoiceItem("Coke", 1, 5))),
     Invoice("Crusty Burger", "Bart", List(
-      InvoiceItem("Coke", 1, BigDecimal.valueOf(5)))),
+      InvoiceItem("Coke", 1, 5))),
     Invoice("Moe", "Homer", List(
-      InvoiceItem("Beer", 13, BigDecimal.valueOf(1.5)),
-      InvoiceItem("Burger", 3, BigDecimal.valueOf(4.5)))),
+      InvoiceItem("Beer", 13, 1.5),
+      InvoiceItem("Burger", 3, 4.5))),
     Invoice("Kwik-E-Mart", "Homer", List(
-      InvoiceItem("Beer", 9, BigDecimal.valueOf(0.9)),
-      InvoiceItem("Chips", 2, BigDecimal.valueOf(0.5)))),
+      InvoiceItem("Beer", 9, 0.9),
+      InvoiceItem("Chips", 2, 0.5))),
     Invoice("Moe", "Marge", List(
-      InvoiceItem("Beer", 1, BigDecimal.valueOf(1.5)))),
+      InvoiceItem("Beer", 1, 1.5))),
     Invoice("Kwik-E-Mart", "Bart", List(
-      InvoiceItem("Coke", 2, BigDecimal.valueOf(2.5)),
-      InvoiceItem("Chips", 2, BigDecimal.valueOf(0.5)))),
+      InvoiceItem("Coke", 2, 2.5),
+      InvoiceItem("Chips", 2, 0.5))),
     Invoice("Kwik-E-Mart", "Marge", List(
-      InvoiceItem("Cake", 2, BigDecimal.valueOf(3.4)),
-      InvoiceItem("Corn Flakes", 5, BigDecimal.valueOf(2.3)))),
+      InvoiceItem("Cake", 2, 3.4),
+      InvoiceItem("Corn Flakes", 5, 2.3))),
     Invoice("Moe", "Homer", List(
-      InvoiceItem("Beer", 5, BigDecimal.valueOf(1.5)))),
+      InvoiceItem("Beer", 5, 1.5))),
     Invoice("Flander's Left-Handed Store", "Marge", List(
-      InvoiceItem("Left-Handed Scissors", 1, BigDecimal.valueOf(10.0))))
+      InvoiceItem("Left-Handed Scissors", 1, 10.0)))
   )
 
   val recipients = List("Homer", "Bart", "Marge")
