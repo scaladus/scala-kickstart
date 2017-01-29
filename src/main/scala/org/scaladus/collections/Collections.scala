@@ -109,8 +109,8 @@ object Collections {
     */
   def computeDealerInventory(invoices: List[Invoice]): Map[String, List[(String, BigDecimal)]] = ???
 
-  case class Person(firstName: String, lastName: String, birthday: LocalDate, gender: Gender) {
-    val age: Int = Period.between(birthday, LocalDate.now()).getYears
+  case class Person(firstName: String, lastName: String, birthday: LocalDate, gender: Gender)(implicit today: () => LocalDate = () => LocalDate.now()) {
+    val age: Int = Period.between(birthday, today()).getYears
   }
 
   sealed trait Gender

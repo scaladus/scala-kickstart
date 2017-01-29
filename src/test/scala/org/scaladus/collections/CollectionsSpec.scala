@@ -23,6 +23,8 @@ import org.scaladus.collections.Collections._
 
 class CollectionsSpec extends FlatSpec with Matchers {
 
+  implicit val today: () => LocalDate = () => LocalDate.of(2017, 1, 16)
+
   val persons = List(
     Person("Jane", "Jungle", LocalDate.of(1978, DECEMBER, 15), Female),
     Person("Mary", "Smith", LocalDate.of(1980, OCTOBER, 19), Female),
