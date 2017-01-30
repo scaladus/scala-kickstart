@@ -15,9 +15,20 @@
  */
 package org.scaladus.java2scala
 
+import java.time.LocalDate
+import java.time.Month.{FEBRUARY, JUNE}
+
 object ScalaMain {
 
   def main(args: Array[String]): Unit = {
+    val bob = Employee("Bob", "Smith", LocalDate.of(1973, FEBRUARY, 12), 42500)
+    val jim = Customer("Jim", "Miller", LocalDate.of(1956, JUNE, 19))
 
+    printPerson(bob)
+    printPerson(jim)
+  }
+
+  private def printPerson(person: Person) {
+    println(s"${person.firstName} is ${person.age} years old")
   }
 }
